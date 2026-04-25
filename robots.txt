@@ -1,11 +1,15 @@
 # robots.txt - https://www.gerardoboffardi.com/
-# Esperto AI in Italia | Digital Marketing & AI Strategist
+# Digital Marketing & AI Automation Strategist
 
+# Default: tutti i bot ben educati possono accedere
 User-agent: *
 Allow: /
 
-# Crawler AI / motori di ricerca generativa - esplicitamente benvenuti
+# ========== AI / motori di ricerca generativa - benvenuti ==========
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -14,17 +18,64 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-User-agent: anthropic-ai
-Allow: /
-
 User-agent: cohere-ai
 Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ========== Crawler SEO aggressivi - bloccati ==========
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# ========== Scraper aggressivi - bloccati ==========
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: linkfluence
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
 
 # Sitemap
 Sitemap: https://www.gerardoboffardi.com/sitemap.xml
