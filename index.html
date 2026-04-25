@@ -11,6 +11,13 @@
     <meta name="google" content="notranslate">
     <link rel="canonical" href="https://gerardoboffardi.com/">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon-32.png">
+
     <!-- Geo / Local SEO -->
     <meta name="geo.region" content="IT-MI">
     <meta name="geo.placename" content="Milano">
@@ -1197,7 +1204,7 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 16px;
             margin-bottom: 48px;
         }
@@ -1832,6 +1839,12 @@
         .reveal-delay-4 { transition-delay: 0.4s; }
 
         /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
         @media (max-width: 900px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -1971,7 +1984,7 @@
                     Una spinta per chi sta iniziando
                 </div>
                 <h1>Gerardo <span class="accent">Boffardi</span></h1>
-                <p class="hero-title-sub">Esperto AI · Digital Marketing & AI Automation Strategist</p>
+                <p class="hero-title-sub">Digital Marketing & AI Automation Strategist</p>
                 <p class="hero-subtitle">Intelligenza Artificiale applicata al marketing · CRM · Workflow Design · Milano, Italia</p>
                 <p class="hero-bio">Lavoro nel marketing digitale da oltre dodici anni, con un percorso che attraversa CRM, performance marketing, automation e oggi <strong>Intelligenza Artificiale applicata al business</strong>. È un'esperienza che metto a disposizione di chi sta iniziando il proprio percorso professionale e cerca un confronto diretto e concreto.</p>
 
@@ -2294,13 +2307,21 @@
             <div class="skills-grid">
                 <div class="skill-card reveal">
                     <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg>
+                    </div>
+                    <h3>Agentic AI</h3>
+                    <p>Progettazione di agenti AI autonomi che pianificano ed eseguono task multi-step in modo strutturato. Model Context Protocol, tool use e orchestrazione di Large Language Models per pipeline che operano con supervisione minima.</p>
+                </div>
+
+                <div class="skill-card reveal reveal-delay-2">
+                    <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
                     <h3>CRM &amp; Marketing Automation</h3>
                     <p>Architettura e gestione end-to-end di piattaforme CRM enterprise come HubSpot e IBM, con automazioni multi-step e integrazione tra Marketing e Sales.</p>
                 </div>
 
-                <div class="skill-card reveal reveal-delay-1">
+                <div class="skill-card reveal reveal-delay-3">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
@@ -2308,7 +2329,7 @@
                     <p>Progettazione di workflow intelligenti con n8n, Make e Zapier, integrati con Large Language Models come Claude e GPT per orchestrare processi complessi.</p>
                 </div>
 
-                <div class="skill-card reveal reveal-delay-2">
+                <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                     </div>
@@ -2316,7 +2337,7 @@
                     <p>Pianificazione, gestione e ottimizzazione di campagne PPC e social advertising su Meta e Google, con focus su conversioni e ROAS in mercati multipli.</p>
                 </div>
 
-                <div class="skill-card reveal reveal-delay-3">
+                <div class="skill-card reveal reveal-delay-1">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     </div>
@@ -2324,7 +2345,7 @@
                     <p>Disegno e ottimizzazione di funnel di acquisizione e conversione, lead scoring predittivo, nurturing automation e segmentazione comportamentale.</p>
                 </div>
 
-                <div class="skill-card reveal">
+                <div class="skill-card reveal reveal-delay-2">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                     </div>
@@ -2332,7 +2353,7 @@
                     <p>Definizione di KPI, attribution model multi-touch e dashboard di reporting a supporto delle decisioni strategiche del board.</p>
                 </div>
 
-                <div class="skill-card reveal reveal-delay-1">
+                <div class="skill-card reveal reveal-delay-3">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                     </div>
@@ -2340,20 +2361,12 @@
                     <p>Gestione operativa e ottimizzazione di piattaforme retail su Shopify, Magento, Amazon ed eBay, con focus su conversion rate e customer experience.</p>
                 </div>
 
-                <div class="skill-card reveal reveal-delay-2">
+                <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </div>
                     <h3>SEO &amp; Content Strategy</h3>
                     <p>SEO on-page e tecnica, content strategy editoriale, ottimizzazione semantica e monitoraggio organico per la crescita di traffico qualificato.</p>
-                </div>
-
-                <div class="skill-card reveal reveal-delay-3">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <h3>Omnichannel Campaign Management</h3>
-                    <p>Coordinamento di campagne multicanale integrate tra paid, owned ed earned media, con messaggi orchestrati lungo tutto il customer journey.</p>
                 </div>
             </div>
 
