@@ -277,7 +277,22 @@
             }
           ],
           "memberOf": {"@type": "Organization", "name": "Talent Garden"},
-          "mainEntityOfPage": {"@id": "https://gerardoboffardi.com/#webpage"}
+          "mainEntityOfPage": {"@id": "https://gerardoboffardi.com/#webpage"},
+          "subjectOf": [
+            {
+              "@type": "Article",
+              "headline": "Il prossimo Marketing Ops non gestirà campagne, governerà sistemi",
+              "url": "https://blog.talentgarden.com/it/blog/il-prossimo-marketing-ops-non-gestir%C3%A0-campagne-governer%C3%A0-sistemi",
+              "author": {"@id": "https://gerardoboffardi.com/#person"},
+              "publisher": {
+                "@type": "Organization",
+                "name": "Talent Garden",
+                "url": "https://talentgarden.com"
+              },
+              "inLanguage": "it-IT",
+              "about": ["Marketing Operations", "AI Automation", "Marketing Systems", "Intelligenza Artificiale"]
+            }
+          ]
         },
         {
           "@type": "WebSite",
@@ -1538,6 +1553,122 @@
             color: var(--accent);
         }
 
+        /* ========== ARTICOLI & INTERVISTE ========== */
+        .articles {
+            background: var(--bg-secondary);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .article-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-decoration: none;
+            color: inherit;
+            transition: all var(--transition);
+            overflow: hidden;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-blue));
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .article-card:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            color: inherit;
+        }
+
+        .article-card:hover::before { opacity: 1; }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .article-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-source svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .article-type {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            padding: 3px 10px;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+        }
+
+        .article-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            transition: color var(--transition);
+        }
+
+        .article-card:hover h3 { color: var(--accent); }
+
+        .article-card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .article-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            transition: gap var(--transition);
+        }
+
+        .article-card:hover .article-cta { gap: 12px; }
+
+        .article-cta svg {
+            width: 14px;
+            height: 14px;
+        }
+
         /* ========== FAQ ========== */
         .faq {
             background: var(--bg-primary);
@@ -1974,6 +2105,7 @@
                 <li><a href="#formazione">Formazione</a></li>
                 <li><a href="#certificazioni">Certificazioni</a></li>
                 <li><a href="#focus">Focus</a></li>
+                <li><a href="#articoli">Articoli</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contatti">Parliamone</a></li>
             </ul>
@@ -1993,6 +2125,7 @@
         <a href="#formazione">Formazione</a>
         <a href="#certificazioni">Certificazioni</a>
         <a href="#focus">Focus</a>
+        <a href="#articoli">Articoli</a>
         <a href="#faq">FAQ</a>
         <a href="#contatti">Parliamone</a>
     </div>
@@ -2413,6 +2546,7 @@
                             <span class="tool-badge">GPT</span>
                             <span class="tool-badge">Gemini</span>
                             <span class="tool-badge">ElevenLabs</span>
+                            <span class="tool-badge">OpenClaw</span>
                         </div>
                     </div>
 
@@ -2437,7 +2571,9 @@
                         <h4>Analytics &amp; Advertising</h4>
                         <div class="tools-grid">
                             <span class="tool-badge">Google Analytics</span>
+                            <span class="tool-badge">Google Ads</span>
                             <span class="tool-badge">Meta Business Suite</span>
+                            <span class="tool-badge">LinkedIn Ads</span>
                         </div>
                     </div>
 
@@ -2454,6 +2590,8 @@
                         <div class="tools-grid">
                             <span class="tool-badge">Notion</span>
                             <span class="tool-badge">Asana</span>
+                            <span class="tool-badge">Slack</span>
+                            <span class="tool-badge">GitHub</span>
                         </div>
                     </div>
                 </div>
@@ -2712,6 +2850,33 @@
                     <h3>Model Context Protocol &amp; Claude Code</h3>
                     <p>Sperimentazione delle frontiere più recenti dell'AI: MCP per integrare modelli e tool, Claude Code per costruire pipeline di automazione di nuova generazione applicate al business.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ARTICOLI & INTERVISTE ========== -->
+    <section class="articles" id="articoli">
+        <div class="container">
+            <div class="section-label reveal">Pubblicazioni</div>
+            <h2 class="section-title reveal">Articoli &amp; Interviste</h2>
+            <p class="section-subtitle reveal" style="margin-bottom: 40px;">Riflessioni e contributi pubblicati su come l'AI sta trasformando il marketing e le operations.</p>
+
+            <div class="articles-grid">
+                <a href="https://blog.talentgarden.com/it/blog/il-prossimo-marketing-ops-non-gestir%C3%A0-campagne-governer%C3%A0-sistemi" target="_blank" rel="noopener noreferrer" class="article-card reveal" aria-label="Leggi l'articolo: Il prossimo Marketing Ops non gestirà campagne, governerà sistemi - apre una nuova finestra">
+                    <div class="article-meta">
+                        <span class="article-source">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            Talent Garden Blog
+                        </span>
+                        <span class="article-type">Articolo</span>
+                    </div>
+                    <h3>Il prossimo Marketing Ops non gestirà campagne, governerà sistemi</h3>
+                    <p>Riflessione sul cambio di paradigma che attende la figura del Marketing Operations: dall'esecuzione di campagne alla governance di sistemi automatizzati orchestrati dall'AI.</p>
+                    <span class="article-cta">
+                        Leggi l'articolo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
