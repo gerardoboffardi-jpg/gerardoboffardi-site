@@ -57,7 +57,13 @@
           "sameAs": [
             "https://linkedin.com/in/gerardo-boffardi"
           ],
-          "image": "https://gerardoboffardi.com/og-image.jpg",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://gerardoboffardi.com/fotoprofilo-gb.jpeg",
+            "width": 800,
+            "height": 800,
+            "caption": "Gerardo Boffardi, esperto AI e Digital Marketing Strategist a Milano"
+          },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Milano",
@@ -941,15 +947,26 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--accent-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--bg-primary);
             position: sticky;
             top: 120px;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-blue));
+            box-shadow: 0 8px 32px rgba(18, 160, 215, 0.25);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .about-avatar:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 40px rgba(18, 160, 215, 0.35);
+        }
+
+        .about-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            background: var(--bg-secondary);
         }
 
         .about-text p {
@@ -1708,9 +1725,8 @@
             }
 
             .about-avatar {
-                width: 120px;
-                height: 120px;
-                font-size: 2rem;
+                width: 140px;
+                height: 140px;
                 position: static;
                 margin: 0 auto;
             }
@@ -1935,8 +1951,8 @@
     <section class="about" id="chi-sono">
         <div class="container">
             <div class="about-grid">
-                <div class="about-avatar reveal" role="img" aria-label="Foto profilo placeholder - iniziali Gerardo Boffardi">
-                    GB
+                <div class="about-avatar reveal">
+                    <img src="fotoprofilo-gb.jpeg" alt="Gerardo Boffardi, esperto AI e Digital Marketing Strategist a Milano" width="180" height="180" loading="lazy">
                 </div>
                 <div class="about-text">
                     <div class="section-label reveal">Chi Sono</div>
