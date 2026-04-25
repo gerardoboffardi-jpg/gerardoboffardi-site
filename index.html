@@ -25,6 +25,12 @@
     <meta property="og:url" content="https://gerardoboffardi.com/">
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Gerardo Boffardi">
+    <meta property="og:image" content="https://www.gerardoboffardi.com/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://www.gerardoboffardi.com/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Gerardo Boffardi, Esperto AI in Italia, Digital Marketing & AI Strategist a Milano">
     <meta property="profile:first_name" content="Gerardo">
     <meta property="profile:last_name" content="Boffardi">
 
@@ -32,6 +38,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gerardo Boffardi | Esperto AI in Italia">
     <meta name="twitter:description" content="Esperto di Intelligenza Artificiale applicata al marketing in Italia. Digital Marketing & AI Strategist a Milano. Certificato Anthropic, HubSpot, Google.">
+    <meta name="twitter:image" content="https://www.gerardoboffardi.com/og-image.jpg">
+    <meta name="twitter:image:alt" content="Gerardo Boffardi, Esperto AI in Italia, Digital Marketing & AI Strategist a Milano">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -282,10 +290,20 @@
           "isPartOf": {"@id": "https://gerardoboffardi.com/#website"},
           "about": {"@id": "https://gerardoboffardi.com/#person"},
           "mainEntity": {"@id": "https://gerardoboffardi.com/#person"},
+          "primaryImageOfPage": {"@id": "https://gerardoboffardi.com/#og-image"},
           "inLanguage": "it-IT",
           "datePublished": "2026-01-01",
           "dateModified": "2026-04-25",
           "breadcrumb": {"@id": "https://gerardoboffardi.com/#breadcrumb"}
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://gerardoboffardi.com/#og-image",
+          "url": "https://www.gerardoboffardi.com/og-image.jpg",
+          "contentUrl": "https://www.gerardoboffardi.com/og-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Gerardo Boffardi, Esperto AI in Italia, Digital Marketing & AI Strategist a Milano"
         },
         {
           "@type": "BreadcrumbList",
@@ -318,6 +336,61 @@
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://gerardoboffardi.com/#faq",
+          "inLanguage": "it-IT",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Chi è Gerardo Boffardi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gerardo Boffardi è un Digital Marketing & AI Automation Strategist con base a Milano e oltre dodici anni di esperienza nel marketing digitale. Lavora in Talent Garden come Digital Marketing Operations Manager, dove guida la strategia CRM e l'integrazione dell'Intelligenza Artificiale nei processi di marketing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Di cosa si occupa nello specifico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le sue aree di specializzazione sono quattro: AI applicata al marketing (integrazione di Large Language Models e modelli generativi nei processi), Intelligent Workflow Design (automazioni avanzate con n8n, Make e Zapier), CRM enterprise (HubSpot end-to-end, lead scoring, customer journey) e performance marketing su Meta e Google."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali certificazioni AI possiede Gerardo Boffardi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "È certificato Anthropic su Building with the Claude API, Claude Code 101, Claude Code in Action e Model Context Protocol Advanced Topics. Ha conseguito il Master AI per il Marketing presso Talent Garden Innovation School e un percorso completo di certificazioni Make. Ha inoltre certificazioni HubSpot, Google Analytics, Google Ads e Meta Business."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come funziona la mentorship offerta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "È una sessione di confronto strutturata di trenta minuti, completamente gratuita e senza vincoli, pensata per chi sta costruendo il proprio percorso nel marketing digitale. Insieme si analizzano la situazione attuale, gli obiettivi e le competenze su cui investire. Niente pitch commerciali, è il modo scelto da Gerardo per restituire valore al settore."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A chi è rivolta la mentorship?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A chi sta muovendo i primi passi nel marketing digitale e vuole confrontarsi su direzione di carriera, scelte formative e skill prioritarie. Particolarmente utile per chi si sta orientando verso CRM, marketing automation o AI applicata al business."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come posso contattare Gerardo Boffardi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il canale principale è LinkedIn. Una connessione con un messaggio breve, in cui ci si presenta e si spiega cosa porta a scrivere, è il modo più diretto. Risposta entro quarantotto ore lavorative."
+              }
+            }
+          ]
         }
       ]
     }
@@ -1441,6 +1514,87 @@
             color: var(--accent);
         }
 
+        /* ========== FAQ ========== */
+        .faq {
+            background: var(--bg-primary);
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: border-color var(--transition);
+        }
+
+        .faq-item[open] {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            transition: color var(--transition);
+        }
+
+        .faq-item summary::-webkit-details-marker { display: none; }
+
+        .faq-item summary:hover { color: var(--accent); }
+
+        .faq-toggle {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform var(--transition), background var(--transition);
+        }
+
+        .faq-toggle svg {
+            width: 14px;
+            height: 14px;
+            color: var(--accent);
+        }
+
+        .faq-item[open] .faq-toggle {
+            transform: rotate(180deg);
+            background: var(--accent);
+        }
+
+        .faq-item[open] .faq-toggle svg { color: var(--bg-primary); }
+
+        .faq-answer {
+            padding: 0 24px 22px 24px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .faq-answer p + p { margin-top: 12px; }
+
+        .faq-answer strong { color: var(--text-primary); font-weight: 600; }
+
         /* ========== CTA FINALE ========== */
         .cta-final {
             text-align: center;
@@ -1785,6 +1939,7 @@
                 <li><a href="#formazione">Formazione</a></li>
                 <li><a href="#certificazioni">Certificazioni</a></li>
                 <li><a href="#focus">Focus</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contatti">Parliamone</a></li>
             </ul>
             <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
@@ -1803,6 +1958,7 @@
         <a href="#formazione">Formazione</a>
         <a href="#certificazioni">Certificazioni</a>
         <a href="#focus">Focus</a>
+        <a href="#faq">FAQ</a>
         <a href="#contatti">Parliamone</a>
     </div>
 
@@ -2132,24 +2288,24 @@
     <section class="skills" id="competenze">
         <div class="container">
             <div class="section-label reveal">Competenze</div>
-            <h2 class="section-title reveal">Cosa so fare</h2>
-            <p class="section-subtitle reveal" style="margin-bottom: 40px;">Competenze costruite sul campo, dalla strategia all'esecuzione.</p>
+            <h2 class="section-title reveal">Aree di intervento</h2>
+            <p class="section-subtitle reveal" style="margin-bottom: 40px;">Otto ambiti operativi maturati su progetti enterprise, dall'impostazione strategica fino all'esecuzione tecnica.</p>
 
             <div class="skills-grid">
                 <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>CRM & Marketing Automation</h3>
-                    <p>HubSpot, IBM, MailerLite, Mailchimp</p>
+                    <h3>CRM &amp; Marketing Automation</h3>
+                    <p>Architettura e gestione end-to-end di piattaforme CRM enterprise come HubSpot e IBM, con automazioni multi-step e integrazione tra Marketing e Sales.</p>
                 </div>
 
                 <div class="skill-card reveal reveal-delay-1">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h3>AI & Intelligent Workflow Design</h3>
-                    <p>n8n, Make, Zapier, Claude, GPT</p>
+                    <h3>AI &amp; Intelligent Workflow Design</h3>
+                    <p>Progettazione di workflow intelligenti con n8n, Make e Zapier, integrati con Large Language Models come Claude e GPT per orchestrare processi complessi.</p>
                 </div>
 
                 <div class="skill-card reveal reveal-delay-2">
@@ -2157,7 +2313,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                     </div>
                     <h3>Performance Marketing</h3>
-                    <p>Meta Ads, Google Ads, PPC/SEM</p>
+                    <p>Pianificazione, gestione e ottimizzazione di campagne PPC e social advertising su Meta e Google, con focus su conversioni e ROAS in mercati multipli.</p>
                 </div>
 
                 <div class="skill-card reveal reveal-delay-3">
@@ -2165,15 +2321,15 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     </div>
                     <h3>Customer Journey Engineering</h3>
-                    <p>Funnel optimization, lead scoring, nurturing</p>
+                    <p>Disegno e ottimizzazione di funnel di acquisizione e conversione, lead scoring predittivo, nurturing automation e segmentazione comportamentale.</p>
                 </div>
 
                 <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                     </div>
-                    <h3>Data Analytics & Reporting</h3>
-                    <p>Google Analytics, Shopify Analytics, dashboard</p>
+                    <h3>Data Analytics &amp; Reporting</h3>
+                    <p>Definizione di KPI, attribution model multi-touch e dashboard di reporting a supporto delle decisioni strategiche del board.</p>
                 </div>
 
                 <div class="skill-card reveal reveal-delay-1">
@@ -2181,15 +2337,15 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                     </div>
                     <h3>E-commerce Management</h3>
-                    <p>Shopify, Magento, Amazon, eBay</p>
+                    <p>Gestione operativa e ottimizzazione di piattaforme retail su Shopify, Magento, Amazon ed eBay, con focus su conversion rate e customer experience.</p>
                 </div>
 
                 <div class="skill-card reveal reveal-delay-2">
                     <div class="skill-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </div>
-                    <h3>SEO & Content Strategy</h3>
-                    <p>On-page, tecnica, copywriting</p>
+                    <h3>SEO &amp; Content Strategy</h3>
+                    <p>SEO on-page e tecnica, content strategy editoriale, ottimizzazione semantica e monitoraggio organico per la crescita di traffico qualificato.</p>
                 </div>
 
                 <div class="skill-card reveal reveal-delay-3">
@@ -2197,7 +2353,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
                     <h3>Omnichannel Campaign Management</h3>
-                    <p>Gestione campagne integrate multi-canale</p>
+                    <p>Coordinamento di campagne multicanale integrate tra paid, owned ed earned media, con messaggi orchestrati lungo tutto il customer journey.</p>
                 </div>
             </div>
 
@@ -2476,6 +2632,79 @@
                     <h3>Model Context Protocol &amp; Claude Code</h3>
                     <p>Sperimentazione delle frontiere più recenti dell'AI: MCP per integrare modelli e tool, Claude Code per costruire pipeline di automazione di nuova generazione applicate al business.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-label reveal">Domande frequenti</div>
+            <h2 class="section-title reveal">FAQ</h2>
+            <p class="section-subtitle reveal" style="margin-bottom: 40px;">Le risposte alle domande che ricevo più spesso su percorso, competenze e mentorship.</p>
+
+            <div class="faq-list">
+                <details class="faq-item reveal">
+                    <summary>
+                        Chi è Gerardo Boffardi?
+                        <span class="faq-toggle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sono <strong>Digital Marketing &amp; AI Automation Strategist</strong> con base a Milano e oltre dodici anni di esperienza nel marketing digitale. Attualmente lavoro in <strong>Talent Garden</strong> come Digital Marketing Operations Manager, dove guido la strategia CRM e l'integrazione dell'Intelligenza Artificiale nei processi di marketing.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>
+                        Di cosa ti occupi nello specifico?
+                        <span class="faq-toggle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Le mie aree di specializzazione sono quattro: <strong>AI applicata al marketing</strong> (integrazione di Large Language Models e modelli generativi nei processi), <strong>Intelligent Workflow Design</strong> (automazioni avanzate con n8n, Make e Zapier), <strong>CRM enterprise</strong> (HubSpot end-to-end, lead scoring, customer journey) e <strong>performance marketing</strong> su Meta e Google.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>
+                        Quali certificazioni AI possiedi?
+                        <span class="faq-toggle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sono certificato <strong>Anthropic</strong> su Building with the Claude API, Claude Code 101, Claude Code in Action e Model Context Protocol Advanced Topics. Ho inoltre conseguito il Master AI per il Marketing presso Talent Garden Innovation School e un percorso completo di certificazioni Make.</p>
+                        <p>Ho anche un portfolio di certificazioni storiche su HubSpot, Google Analytics, Google Ads e Meta Business.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>
+                        Come funziona la mentorship che offri?
+                        <span class="faq-toggle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>È una sessione di confronto strutturata di trenta minuti, completamente <strong>gratuita e senza vincoli</strong>, pensata per chi sta costruendo il proprio percorso nel marketing digitale e cerca un riferimento concreto.</p>
+                        <p>Insieme analizziamo dove sei oggi, dove vuoi arrivare e quali competenze ha senso prioritizzare. Niente pitch commerciali, niente upselling: è il modo che ho scelto per restituire valore al settore che mi ha formato.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>
+                        A chi è rivolta la mentorship?
+                        <span class="faq-toggle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>A chi sta muovendo i primi passi nel marketing digitale e vuole confrontarsi su <strong>direzione di carriera, scelte formative, skill prioritarie</strong> in un settore in trasformazione continua. Particolarmente utile per chi si sta orientando verso CRM, marketing automation o AI applicata al business.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item reveal">
+                    <summary>
+                        Come posso contattarti?
+                        <span class="faq-toggle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Il canale principale è <strong>LinkedIn</strong>. Una connessione con un messaggio breve, in cui spieghi chi sei e cosa ti porta a scrivere, è il modo più diretto. Rispondo entro quarantotto ore lavorative.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>

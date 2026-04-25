@@ -1,0 +1,30 @@
+# robots.txt - https://www.gerardoboffardi.com/
+# Esperto AI in Italia | Digital Marketing & AI Strategist
+
+User-agent: *
+Allow: /
+
+# Crawler AI / motori di ricerca generativa - esplicitamente benvenuti
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap
+Sitemap: https://www.gerardoboffardi.com/sitemap.xml
