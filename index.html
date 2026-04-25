@@ -2018,8 +2018,11 @@
             }
 
             .impact { padding: 56px 20px; }
-            .impact-grid { gap: 12px; }
-            .impact-stat { padding: 20px 8px; }
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .impact-stat { padding: 16px 8px; }
             .impact-stat::after { display: none !important; }
 
             .metric {
