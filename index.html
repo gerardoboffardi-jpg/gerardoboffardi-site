@@ -27,7 +27,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Gerardo Boffardi | Esperto AI in Italia | Digital Marketing & AI Strategist">
-    <meta property="og:description" content="Esperto di Intelligenza Artificiale applicata al marketing in Italia. Oltre 10 anni di esperienza, certificato Anthropic, HubSpot, Google e Meta. Milano.">
+    <meta property="og:description" content="Esperto di Intelligenza Artificiale applicata al marketing in Italia. Oltre dodici anni di esperienza, certificato Anthropic, HubSpot, Google e Meta. Milano.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://gerardoboffardi.com/">
     <meta property="og:locale" content="it_IT">
@@ -1256,7 +1256,7 @@
 
         /* Tools badges */
         .tools-section {
-            padding-top: 32px;
+            padding-top: 40px;
             border-top: 1px solid var(--border);
         }
 
@@ -1266,7 +1266,24 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--text-muted);
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .tools-categories {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px 40px;
+        }
+
+        .tools-category h4 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
         }
 
         .tools-grid {
@@ -1903,6 +1920,11 @@
                 grid-template-columns: 1fr;
             }
 
+            .tools-categories {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
             .certs-grid {
                 grid-template-columns: 1fr;
             }
@@ -2149,7 +2171,7 @@
         <div class="container">
             <div class="section-label reveal">Esperienza</div>
             <h2 class="section-title reveal">Percorso Professionale</h2>
-            <p class="section-subtitle reveal" style="margin-bottom: 48px;">Oltre 10 anni nel Digital Marketing, con focus crescente su CRM, automazione e AI.</p>
+            <p class="section-subtitle reveal" style="margin-bottom: 48px; max-width: 760px;">Dodici anni tra Digital Marketing, CRM, automation e AI.</p>
 
             <div class="timeline">
                 <!-- Talent Garden - DMO Manager -->
@@ -2372,23 +2394,68 @@
 
             <!-- Tools -->
             <div class="tools-section reveal">
-                <div class="tools-label">Software & Tools</div>
-                <div class="tools-grid">
-                    <span class="tool-badge">HubSpot</span>
-                    <span class="tool-badge">Salesforce</span>
-                    <span class="tool-badge">n8n</span>
-                    <span class="tool-badge">Make</span>
-                    <span class="tool-badge">Zapier</span>
-                    <span class="tool-badge">Google Analytics</span>
-                    <span class="tool-badge">Meta Business Suite</span>
-                    <span class="tool-badge">Mailchimp</span>
-                    <span class="tool-badge">MailerLite</span>
-                    <span class="tool-badge">Notion</span>
-                    <span class="tool-badge">Asana</span>
-                    <span class="tool-badge">Claude</span>
-                    <span class="tool-badge">GPT</span>
-                    <span class="tool-badge">Gemini</span>
-                    <span class="tool-badge">Shopify</span>
+                <div class="tools-label">Software &amp; Tools</div>
+                <div class="tools-categories">
+                    <div class="tools-category">
+                        <h4>CRM &amp; Marketing Automation</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">HubSpot</span>
+                            <span class="tool-badge">Salesforce</span>
+                            <span class="tool-badge">Mailchimp</span>
+                            <span class="tool-badge">MailerLite</span>
+                        </div>
+                    </div>
+
+                    <div class="tools-category">
+                        <h4>AI &amp; Generative</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">Claude</span>
+                            <span class="tool-badge">GPT</span>
+                            <span class="tool-badge">Gemini</span>
+                            <span class="tool-badge">ElevenLabs</span>
+                        </div>
+                    </div>
+
+                    <div class="tools-category">
+                        <h4>Workflow &amp; Integration</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">n8n</span>
+                            <span class="tool-badge">Make</span>
+                            <span class="tool-badge">Zapier</span>
+                        </div>
+                    </div>
+
+                    <div class="tools-category">
+                        <h4>Voice &amp; Communication</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">Twilio</span>
+                            <span class="tool-badge">Fireflies</span>
+                        </div>
+                    </div>
+
+                    <div class="tools-category">
+                        <h4>Analytics &amp; Advertising</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">Google Analytics</span>
+                            <span class="tool-badge">Meta Business Suite</span>
+                        </div>
+                    </div>
+
+                    <div class="tools-category">
+                        <h4>E-commerce &amp; CMS</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">Shopify</span>
+                            <span class="tool-badge">WordPress</span>
+                        </div>
+                    </div>
+
+                    <div class="tools-category">
+                        <h4>Productivity</h4>
+                        <div class="tools-grid">
+                            <span class="tool-badge">Notion</span>
+                            <span class="tool-badge">Asana</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
