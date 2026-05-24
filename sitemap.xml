@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://www.gerardoboffardi.com/</loc>
+        <loc>https://gerardoboffardi.com/</loc>
         <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.gerardoboffardi.com/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gerardoboffardi.com/"/>
+        <xhtml:link rel="alternate" hreflang="it-IT" href="https://gerardoboffardi.com/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://gerardoboffardi.com/"/>
     </url>
 </urlset>
