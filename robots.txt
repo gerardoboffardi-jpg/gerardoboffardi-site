@@ -1,4 +1,4 @@
-# robots.txt - https://www.gerardoboffardi.com/
+# robots.txt - https://gerardoboffardi.com/
 # Digital Marketing & AI Automation Strategist
 
 # Default: tutti i bot ben educati possono accedere
@@ -78,4 +78,4 @@ User-agent: ZoominfoBot
 Disallow: /
 
 # Sitemap
-Sitemap: https://www.gerardoboffardi.com/sitemap.xml
+Sitemap: https://gerardoboffardi.com/sitemap.xml
